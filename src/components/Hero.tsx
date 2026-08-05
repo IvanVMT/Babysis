@@ -6,6 +6,11 @@ interface HeroProps {
 }
 
 export default function Hero({ onOpenAbout }: HeroProps) {
+    const handleReservarClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <section className="hero section">
             <div className="container hero-container">
@@ -21,7 +26,7 @@ export default function Hero({ onOpenAbout }: HeroProps) {
                         porque sabemos que son lo más importante.
                     </p>
                     <div className="hero-actions">
-                        <a href="#contact" className="btn-primary">Reservar Cita</a>
+                        <a href="#contact" className="btn-primary" onClick={handleReservarClick}>Reservar Cita</a>
                         <button onClick={onOpenAbout} className="btn-secondary">Quiénes Somos</button>
                     </div>
 
@@ -35,6 +40,8 @@ export default function Hero({ onOpenAbout }: HeroProps) {
                         alt="Niñera leyendo un libro a un niño feliz"
                         className="hero-image"
                     />
+                    <span className="hero-sticker sticker-star" aria-hidden="true">⭐</span>
+                    <span className="hero-sticker sticker-heart" aria-hidden="true">💛</span>
                 </div>
             </div>
         </section>

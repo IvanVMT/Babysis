@@ -5,42 +5,43 @@ export default function Footer() {
             backgroundColor: 'var(--color-secondary)',
             color: 'var(--color-text)',
             padding: '3rem 0',
-            textAlign: 'center'
+            textAlign: 'center',
+            borderTop: '3px solid var(--color-text)'
         }}>
             <div className="container">
-                <div style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>
-                    Babysis
+                <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', fontWeight: '600', marginBottom: '1rem' }}>
+                    Baby<span style={{ color: 'var(--color-primary)' }}>sis</span>
                 </div>
-                <p style={{ opacity: 0.9, marginBottom: '2rem' }}>
+                <p style={{ opacity: 0.85, marginBottom: '2rem' }}>
                     Cuidado infantil con corazón y profesionalismo.
                 </p>
 
                 <div style={{ marginBottom: '2rem' }}>
                     <a href="https://instagram.com/babysis.cl" target="_blank" rel="noopener noreferrer" style={{
-                        color: 'var(--color-primary)',
+                        color: 'var(--color-text)',
+                        backgroundColor: '#fff',
                         textDecoration: 'none',
                         display: 'inline-flex',
                         alignItems: 'center',
                         gap: '0.5rem',
-                        padding: '0.5rem 1rem',
-                        border: '2px solid var(--color-primary)',
+                        padding: '0.5rem 1.25rem',
+                        border: '2px solid var(--color-text)',
                         borderRadius: '50px',
-                        fontWeight: '600',
+                        fontFamily: 'var(--font-heading)',
+                        fontWeight: '500',
                         transition: 'all 0.2s'
                     }}
                         onMouseOver={(e) => {
-                            e.currentTarget.style.backgroundColor = 'var(--color-primary)';
-                            e.currentTarget.style.color = 'white';
+                            e.currentTarget.style.transform = 'translateY(-2px)';
                         }}
                         onMouseOut={(e) => {
-                            e.currentTarget.style.backgroundColor = 'transparent';
-                            e.currentTarget.style.color = 'var(--color-primary)';
+                            e.currentTarget.style.transform = 'translateY(0)';
                         }}
                     >
                         <span>📷</span> Instagram
                     </a>
                 </div>
-                <p style={{ fontSize: '0.9rem', opacity: 0.7 }}>
+                <p style={{ fontSize: '0.9rem', opacity: 0.6 }}>
                     &copy; {new Date().getFullYear()} Babysis. Todos los derechos reservados.
                 </p>
             </div>

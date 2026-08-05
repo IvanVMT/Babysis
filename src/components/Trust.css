@@ -1,6 +1,5 @@
 .trust-section {
-    background-color: var(--color-secondary);
-    /* Lavender blush bg */
+    background: linear-gradient(135deg, var(--color-grape-tint) 0%, var(--color-sky-tint) 100%);
 }
 
 .carousel-container {
@@ -32,7 +31,8 @@
     background-color: var(--color-surface);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    border: 3px solid var(--color-text);
+    box-shadow: 5px 5px 0 var(--color-text);
     position: relative;
     scroll-snap-align: start;
     /* Start alignment is more robust */
@@ -43,7 +43,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: white;
-    border: 1px solid var(--color-primary);
+    border: 2px solid var(--color-text);
     color: var(--color-primary);
     width: 40px;
     height: 40px;
@@ -55,7 +55,7 @@
     cursor: pointer;
     transition: all 0.2s;
     z-index: 10;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 3px 3px 0 var(--color-text);
 }
 
 .carousel-btn.prev {
@@ -116,9 +116,9 @@
     top: 1rem;
     right: 2rem;
     font-size: 6rem;
-    color: var(--color-secondary);
-    font-family: serif;
-    opacity: 0.5;
+    color: var(--color-sunshine-tint);
+    font-family: var(--font-heading);
+    opacity: 0.8;
 }
 
 .stars {

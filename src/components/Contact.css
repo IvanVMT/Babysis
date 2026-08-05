@@ -46,10 +46,11 @@
 }
 
 .contact-form {
-    background-color: white;
+    background-color: var(--color-sky-tint);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    border: 3px solid var(--color-text);
+    box-shadow: 6px 6px 0 var(--color-text);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -106,16 +107,20 @@
     gap: 0.5rem;
     background-color: #25D366;
     color: white;
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-weight: 500;
     text-decoration: none;
     border-radius: var(--radius-full);
+    border: 3px solid var(--color-text);
+    box-shadow: 4px 4px 0 var(--color-text);
     margin-top: 1rem;
-    transition: background-color 0.2s, transform 0.2s;
+    transition: background-color 0.2s, transform 0.15s, box-shadow 0.15s;
 }
 
 .btn-whatsapp:hover {
-    background-color: #128C7E;
-    transform: translateY(-2px);
+    background-color: #1EBE59;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-text);
 }
 
 .whatsapp-icon {

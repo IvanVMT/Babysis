@@ -9,7 +9,8 @@
 
 .section-subtitle {
     color: var(--color-primary);
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.9rem;
@@ -25,36 +26,53 @@
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+    gap: 1.75rem;
 }
 
 .service-card {
-    background-color: var(--color-bg);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid transparent;
+    border: 3px solid var(--color-text);
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 5px 5px 0 var(--color-text);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: rgba(255, 183, 197, 0.3);
-    background-color: #fff;
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--color-text);
+}
+
+.service-card--coral {
+    background-color: var(--color-coral-tint);
+}
+
+.service-card--sky {
+    background-color: var(--color-sky-tint);
+}
+
+.service-card--grape {
+    background-color: var(--color-grape-tint);
+}
+
+.service-card--mint {
+    background-color: var(--color-mint-tint);
+}
+
+.service-card--sunshine {
+    background-color: var(--color-sunshine-tint);
 }
 
 .service-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    display: inline-block;
-    padding: 1rem;
-    background-color: var(--color-secondary);
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-text);
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
 }
 
 .service-title {

@@ -17,10 +17,11 @@
     background-color: white;
     padding: 2.5rem;
     border-radius: var(--radius-lg);
+    border: 3px solid var(--color-text);
     max-width: 500px;
     width: 90%;
     position: relative;
-    box-shadow: var(--shadow-md);
+    box-shadow: 8px 8px 0 var(--color-text);
     animation: slideUp 0.3s ease;
 }
 
@@ -44,6 +45,10 @@
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-align: center;
+}
+
+.modal-close {
+    font-family: var(--font-heading);
 }
 
 .modal-body {

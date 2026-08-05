@@ -14,6 +14,12 @@ export default function Navbar({ onOpenAbout }: NavbarProps) {
         onOpenAbout();
     };
 
+    const handleReservarClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        setIsOpen(false);
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <nav className="navbar">
             <div className="container navbar-container">
@@ -21,18 +27,19 @@ export default function Navbar({ onOpenAbout }: NavbarProps) {
                     Baby<span className="logo-accent">sis</span>
                 </a>
 
-                <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </button>
+                <div className="navbar-actions">
+                    <a href="#contact" className="btn-primary" onClick={handleReservarClick}>Reservar</a>
 
-                <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-                    <li><a href="#about" onClick={handleAboutClick}>Sobre Nosotras</a></li>
-                    <li><a href="#services" onClick={() => setIsOpen(false)}>Servicios</a></li>
-                    <li><a href="#trust" onClick={() => setIsOpen(false)}>Testimonios</a></li>
-                    <li><a href="#contact" className="btn-primary" onClick={() => setIsOpen(false)}>Reservar</a></li>
-                </ul>
+                    <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Abrir menú">
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                    </button>
+
+                    <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+                        <li><a href="#about" onClick={handleAboutClick}>Sobre Nosotras</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     );

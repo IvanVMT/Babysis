@@ -5,32 +5,38 @@ export default function Services() {
         {
             title: "Babysitter Casual",
             description: "Flexibilidad total para esas salidas imprevistas, cenas o compromisos de última hora.",
-            icon: "🌙"
+            icon: "🌙",
+            color: "coral"
         },
         {
             title: "Babysitter Fijo",
             description: "Apoyo estable para tu rutina semanal. Horarios garantizados y la misma niñera siempre.",
-            icon: "📅"
+            icon: "📅",
+            color: "sky"
         },
         {
             title: "Babysitter Nocturno",
             description: "Descansa tranquila toda la noche. Nos encargamos de todo mientras tú recargas energías.",
-            icon: "💤"
+            icon: "💤",
+            color: "grape"
         },
         {
             title: "Jardín en Casa",
             description: "La experiencia preescolar en la comodidad de tu hogar. Actividades lúdicas y educativas seguras.",
-            icon: "🏠"
+            icon: "🏠",
+            color: "mint"
         },
         {
             title: "Clases Particulares",
             description: "Refuerzo escolar personalizado. Modalidad online o presencial para apoyar su aprendizaje.",
-            icon: "📚"
+            icon: "📚",
+            color: "sunshine"
         },
         {
             title: "Estimulación Temprana",
             description: "Ejercicios y juegos especializados para potenciar el desarrollo cognitivo y motor de tu bebé.",
-            icon: "🧸"
+            icon: "🧸",
+            color: "coral"
         }
     ];
 
@@ -44,7 +50,7 @@ export default function Services() {
 
                 <div className="services-grid">
                     {services.map((service, index) => (
-                        <div className="service-card" key={index}>
+                        <div className={`service-card service-card--${service.color}`} key={index}>
                             <div className="service-icon">{service.icon}</div>
                             <h3 className="service-title">{service.title}</h3>
                             <p className="service-description">{service.description}</p>
